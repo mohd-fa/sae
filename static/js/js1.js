@@ -5,13 +5,18 @@ function myFunction() {
     } else {
         x.className = "on";
     }
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    goToTop()
 }
+
 window.onscroll = function () {
     var x = document.getElementById("responsive");
     var currentScrollPos = window.pageYOffset;
     if (currentScrollPos > 5) {
         x.className = "off";
     }
+}
+
+function goToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
