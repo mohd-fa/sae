@@ -1,0 +1,50 @@
+
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'style/main.css' %}">
+        <title>SAE SCTCE</title>
+    </head>
+
+    <body>
+
+        <div class="topnav">
+            <a href="#"><img src="{% static 'image/sae.png' %}" alt="SAE logo"></a>
+            <ul class="navlist">
+                <li class="navitem"><a href="#home" class="active">Home</a></li>
+                <li class="navitem"><a href="#news">News</a></li>
+                <li class="navitem"><a href="#contact">Contact</a></li>
+                <li class="navitem"><a href="#about">About</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <ul id="responsive" class="off">
+            <li class="navitem"><a href="#" class="active">Home</a></li>
+            <li class="navitem"><a href="#news">About</a></li>
+            <li class="navitem"><a href="#contact">Events</a></li>
+            <li class="navitem"><a href="#about">Archive</a></li>
+        </ul>
+        <div class="homeimage">
+            <img src="{% static 'image/repair.jpeg' %}" alt="bg image">
+            <div class="overlay">
+            </div>
+        </div>
+        
+        
+
+
+
+        <script src="{% static 'js/js1.js' %}">
+        </script>
+
+    </body>
+
+</html>
