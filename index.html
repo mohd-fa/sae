@@ -1,13 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
     <title>SAE SCTCE</title>
 </head>
+
 <body>
-    <h1 style="color: blue,">SAE COLLEGIATE CLUB SCTCE</h1>
+
+    <div class="topnav">
+        <a href="#"><img src="/assets/img/sae.png" alt="SAE logo"></a>
+        <ul class="navlist">
+            <li class="navitem"><a href="#home" class="active">Home</a></li>
+            <li class="navitem"><a href="#news">News</a></li>
+            <li class="navitem"><a href="#contact">Contact</a></li>
+            <li class="navitem"><a href="#about">About</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <ul id="responsive" class="off">
+        <li class="navitem"><a href="#" class="active">Home</a></li>
+        <li class="navitem"><a href="#news">About</a></li>
+        <li class="navitem"><a href="#contact">Events</a></li>
+        <li class="navitem"><a href="#about">Archive</a></li>
+    </ul>
+    <div class="homeimage">
+        <img src="/assets/img/repair.jpeg" alt="bg image">
+        <div class="overlay">
+        </div>
+    </div>
     
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("responsive");
+            if (x.className === "on") {
+                x.className = "off";
+            } else {
+                x.className = "on";
+            }
+        }
+    </script>
+
 </body>
+
 </html>
