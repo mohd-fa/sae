@@ -18,13 +18,16 @@ h2 {
     margin-bottom: 1em;
 }
 
-.topnav {
-    z-index: 1;
+.top{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     top: 0;
     position: fixed;
-    width: -webkit-fill-available;
-    width: -moz-available;
-    overflow: clip;
+    z-index: 2;
+    width: 100%;
+}
+
+.topnav {
+    height: 4rem;
     padding: 1em;
     display: flex;
     align-items: center;
@@ -187,20 +190,52 @@ h2 {
 }
 
 .eventcard {
+   
     overflow: hidden;
     height: 500px;
     width: 27vw;
     background: #FFFFFF;
     border: 1px solid #C9C9C9;
     border-radius: 10px;
-   
+   transition: .2s all;
+}
+.eventcard:focus,.eventcard:hover {
+    box-shadow: 0 0 1.5em 0.25em rgb(0 0 0 / 25%);
+}
+
+.eventcard:focus .eventimg::before,
+.eventcard:hover .eventimg::before{
+    background: #00000041;
+}
+
+.eventcard:focus img,.eventcard:hover img{
+    transform: scale(1.1);
+}
+
+.eventimg::before{
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #00000000;
+    transition: .2s all;
+}
+
+.eventimg{
+    overflow: hidden;
+    position: relative;
+    height: 15em;
 }
 
 .eventimg img {
     position: static;
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
+    transition: .2s all;
 }
 
 .eventc {
@@ -367,9 +402,12 @@ h2 {
 
 @media screen and (max-width: 600px) {
     .on {
+        position: relative;
+        top: -1em;
         background-color: #fff;
         padding-left: 0;
-        margin-top: 0;
+        padding-bottom: 1em;
+        margin: 0;
         display: block;
         list-style-type: none;
     }

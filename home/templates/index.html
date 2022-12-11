@@ -13,26 +13,26 @@
     </head>
 
     <body>
-
-        <div class="topnav">
-            <a href="/"><img src="{% static 'image/sae.png' %}" alt="SAE logo"></a>
-            <ul class="navlist">
-                <li class="navitem"><a href="/" {% if active == 'home'  %}class="active"{% endif %} >Home</a></li>
+        <div class='top'>
+            <div class="topnav">
+                <a href="/"><img src="{% static 'image/sae.png' %}" alt="SAE logo"></a>
+                <ul class="navlist">
+                    <li class="navitem"><a href="/" {% if active == 'home'  %}class="active"{% endif %} >Home</a></li>
+                    <li class="navitem"><a href="/about" {% if active == 'about'  %}class="active"{% endif %}>About</a></li>
+                    <li class="navitem"><a href="/events" {% if active == 'events'  %}class="active"{% endif %}>Events</a></li>
+                    <li class="navitem"><a href="/archive" {% if active == 'archive'  %}class="active"{% endif %}>Archive</a></li>
+                </ul>
+                <a href="javascript:menuButton();" class="icon">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <ul id="responsive" class="off">
+                <li class="navitem"><a href="/" {% if active == 'home'  %}class="active"{% endif %}>Home</a></li>
                 <li class="navitem"><a href="/about" {% if active == 'about'  %}class="active"{% endif %}>About</a></li>
                 <li class="navitem"><a href="/events" {% if active == 'events'  %}class="active"{% endif %}>Events</a></li>
                 <li class="navitem"><a href="/archive" {% if active == 'archive'  %}class="active"{% endif %}>Archive</a></li>
             </ul>
-            <a href="javascript:menuButton();" class="icon">
-                <i class="fa fa-bars"></i>
-            </a>
         </div>
-        <ul id="responsive" class="off">
-            <li class="navitem"><a href="/" {% if active == 'home'  %}class="active"{% endif %}>Home</a></li>
-            <li class="navitem"><a href="/about" {% if active == 'about'  %}class="active"{% endif %}>About</a></li>
-            <li class="navitem"><a href="/events" {% if active == 'events'  %}class="active"{% endif %}>Events</a></li>
-            <li class="navitem"><a href="/archive" {% if active == 'archive'  %}class="active"{% endif %}>Archive</a></li>
-        </ul>
-
         {% block content %}
         {% endblock %}
 
