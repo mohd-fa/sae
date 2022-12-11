@@ -1,8 +1,12 @@
 from django.shortcuts import render
 
+from .models import Event
+
 # Create your views here.
+
 def home(request):
-    return render(request , 'home.html', {'active': 'home'})
+    eventData = Event.objects.all().order_by('date')[:3]
+    return render(request , 'home.html', {'active': 'home', 'events':eventData})
 
 def events(request):
     return render(request , 'events.html', {'active': 'events'})
