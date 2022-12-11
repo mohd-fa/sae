@@ -15,44 +15,27 @@
     <body>
 
         <div class="topnav">
-            <a href="#"><img src="{% static 'image/sae.png' %}" alt="SAE logo"></a>
+            <a href="/"><img src="{% static 'image/sae.png' %}" alt="SAE logo"></a>
             <ul class="navlist">
-                <li class="navitem"><a href="#home" class="active">Home</a></li>
-                <li class="navitem"><a href="#news">News</a></li>
-                <li class="navitem"><a href="#contact">Contact</a></li>
-                <li class="navitem"><a href="#about">About</a></li>
+                <li class="navitem"><a href="/" {% if active == 'home'  %}class="active"{% endif %} >Home</a></li>
+                <li class="navitem"><a href="/about" {% if active == 'about'  %}class="active"{% endif %}>About</a></li>
+                <li class="navitem"><a href="/events" {% if active == 'events'  %}class="active"{% endif %}>Events</a></li>
+                <li class="navitem"><a href="/archive" {% if active == 'archive'  %}class="active"{% endif %}>Archive</a></li>
             </ul>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <a href="javascript:menuButton();" class="icon">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
         <ul id="responsive" class="off">
-            <li class="navitem"><a href="#" class="active">Home</a></li>
-            <li class="navitem"><a href="#news">About</a></li>
-            <li class="navitem"><a href="#contact">Events</a></li>
-            <li class="navitem"><a href="#about">Archive</a></li>
+            <li class="navitem"><a href="/" {% if active == 'home'  %}class="active"{% endif %}>Home</a></li>
+            <li class="navitem"><a href="/about" {% if active == 'about'  %}class="active"{% endif %}>About</a></li>
+            <li class="navitem"><a href="/events" {% if active == 'events'  %}class="active"{% endif %}>Events</a></li>
+            <li class="navitem"><a href="/archive" {% if active == 'archive'  %}class="active"{% endif %}>Archive</a></li>
         </ul>
-        <div class="homeimage">
-            <img src="{% static 'image/highway.png' %}" alt="bg image">
-            <div class="overlay">
-            </div>
-        </div>
-        
-        <div class="about">
-            <h2>About</h2>
-            <p>The <b>Society of Automotive Engineers</b> is an international organization focusing on engineers from the
-                Automotive and Aerospace domain. The SAE Collegiate Club of Sri Chitra Thirunal College of Engineering was
-                the first in Kerala established by Dr. U Prakash in 1996. Since then the club has remained active for the
-                past 20+ years with more than 200 members every year.The club has conducted competition, organised workshops
-                and talk sessions by various industry experts. Over the years members of the club have participated in
-                national events such as the SAE Baja and Formula Student. The club also provides students with support in
-                studies in the form of journal papers and magazines which enable them to become the best.</p>
-        </div>
-        <div class="member">
-            <img src="{% static 'image/memberbg.png' %}">
-            <div class="overlay2">
-            </div>
-        </div>
+
+        {% block content %}
+        {% endblock %}
+
         <div class="contact">
             <div class="contactHeader">
                 <p class="git">Get in Touch !!</p>
@@ -62,7 +45,7 @@
             </div>
             <div class="subSection">
                 <div class="leftSection">
-    
+
                 </div>
                 <div class="rightSection">
                     <div class="mapcontainer">
@@ -89,8 +72,8 @@
             </div>
             <p class="footerText">© Copyright SAE SCTCE. All Rights Reserved</p>
         </div>
-    
-        
+
+
 
 
 
