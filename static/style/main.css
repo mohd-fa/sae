@@ -185,19 +185,20 @@ h2 {
 }
 
 .eventsub {
-    justify-content: space-around;
-    display: flex;
+    justify-content: space-between;
+    grid-row-gap: 1em;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 .eventcard {
-   
     overflow: hidden;
-    height: 500px;
+    height: 30rem;
     width: 27vw;
     background: #FFFFFF;
     border: 1px solid #C9C9C9;
     border-radius: 10px;
-   transition: .2s all;
+    transition: .2s all;
 }
 .eventcard:focus,.eventcard:hover {
     box-shadow: 0 0 1.5em 0.25em rgb(0 0 0 / 25%);
@@ -285,13 +286,14 @@ h2 {
 }
 
 .contact {
-    background: #212121;
+    background: #000;
     padding: 3% 5vw 0 5vw;
 }
 
 .contactHeader {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .git {
@@ -321,15 +323,75 @@ h2 {
 }
 
 .subSection {
-    display: flex;
     gap: 5vw;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftSection {
+    box-sizing: content-box;
+    width: 100%;
+}
+
+.pname{
+    margin-top: 0;
+}
+
+.formSection p{
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #aaa;
+    font-family: Poppins;
+}
+.leftSection .sendbutton p{
+    color: #fff;
+    padding: 0.5em 0.75em;
+    font-family: Poppins;
+    text-align: center;
+    transform: skew(20deg);
+}
+
+.sendbutton {
+    margin: 0 auto;
+    background: #224E7D;
+    width: fit-content;
+    transform: skew(-20deg);
+}
+
+.sendbutton img{
+    position: relative;
+    top: .2em;
 }
 
 
+.sendbutton a {
+    text-decoration: none;
+}
+
+.formname {
+    align-items: center;
+    border: 2.5px solid #aaa;
+    border-radius: 5px;
+    height: 6vh;
+    
+    width: 100%;
+}
+
+.formmessage {
+    align-items: center;
+    border: 2.5px solid #aaa;
+    border-radius: 5px;
+    height: 20vh;
+    width: 100%;
+}
+
 .rightSection {
-    margin-left: auto;
-    float: right;
-    width: 40vw;
+    width: 90%;
 }
 
 .mapcontainer {
@@ -364,7 +426,7 @@ h2 {
     font-size: 14px;
     line-height: 28px;
     letter-spacing: 0.02em;
-    color: rgba(255, 255, 255, 0.62);
+    color: #aaa;
     font-family: Poppins;
 }
 
@@ -379,7 +441,7 @@ h2 {
     font-size: 14px;
     line-height: 28px;
     letter-spacing: 0.02em;
-    color: rgba(255, 255, 255, 0.62);
+    color: #aaa;
     font-family: Poppins;
     text-align: center;
     margin: 0;
@@ -435,6 +497,10 @@ h2 {
         font-size: small;
     }
 
+}
+
+.eventpage {
+    margin-top: 5vh;
 }
 
 .placeholder {
