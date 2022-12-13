@@ -1,9 +1,25 @@
 {% extends "index.html" %}
-
+{% load static %}
 {% block content %}
 
-<div class="placeholder">
-    <h2>About</h2>
+<div class="member">
+    <img src="{% static 'image/memberbg.png' %}">
+    <div class="memberoverlay">
+        <div class="membersub">
+            <div class="membercard">
+                <p class="no">1996</p>
+                <p>Established Year</p>
+            </div>
+            <div class="membercard">
+                <p class="no">61</p>
+                <p>Student Members</p>
+            </div>
+            <div class="membercard">
+                <p class="no">8</p>
+                <p>Faculty Members</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
