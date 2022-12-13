@@ -228,7 +228,7 @@ h2 {
 .eventimg{
     overflow: hidden;
     position: relative;
-    height: 15em;
+    height: 50%;
 }
 
 .eventimg img {
@@ -249,15 +249,15 @@ h2 {
 }
 
 .fulleventbutton {
+    width: max-content;
     margin: 0 auto;
     background: #224E7D;
-    width: fit-content;
     transform: skew(-20deg);
 }
 
 
 .fulleventbutton p {
-
+    font-size: 14px;
     color: #fff;
     padding: .5em .75em;
     font-family: Poppins;
@@ -378,7 +378,7 @@ h2 {
     border: 2.5px solid #aaa;
     border-radius: 5px;
     height: 6vh;
-    
+
     width: 100%;
 }
 
@@ -451,6 +451,13 @@ h2 {
 
 
 @media screen and (max-width: 600px) {
+    p {
+        font-size: 14px;
+    }
+
+    .membercard p.no {
+        font-size: 3rem;
+    }
 
     .topnav .navlist {
         display: none;
@@ -460,18 +467,38 @@ h2 {
         display: block;
         margin-left: auto;
     }
+
+    .eventsub {
+        grid-template-columns: auto;
+    }
+
+    .eventcard {
+        display: flex;
+        height: 15rem;
+        width: 100%;
+    }
+
+    .eventc{
+        width: 50%;
+    }
+
+    .eventimg{
+        width: 50%;
+        overflow: hidden;
+        height: 100%;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
     .on {
-        position: relative;
-        top: -1em;
         background-color: #fff;
         padding-left: 0;
         padding-bottom: 1em;
         margin: 0;
         display: block;
         list-style-type: none;
+
     }
 
     .on .navitem {
@@ -494,7 +521,7 @@ h2 {
 
     .aboutsection p {
         text-indent: 3em;
-        font-size: small;
+        font-size: 12px;
     }
 
 }
