@@ -18,7 +18,7 @@ h2 {
     margin-bottom: 1em;
 }
 
-.top{
+.top {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     top: 0;
     position: fixed;
@@ -134,9 +134,9 @@ h2 {
 
 }
 
-.memberimage img{
+.memberimage img {
     object-fit: cover;
-    height: 30vh;
+    min-height: 30vh;
     width: 100%;
 }
 
@@ -219,20 +219,23 @@ h2 {
     border-radius: 10px;
     transition: .2s all;
 }
-.eventcard:focus,.eventcard:hover {
+
+.eventcard:focus,
+.eventcard:hover {
     box-shadow: 0 0 1.5em 0.25em rgb(0 0 0 / 25%);
 }
 
 .eventcard:focus .eventimg::before,
-.eventcard:hover .eventimg::before{
+.eventcard:hover .eventimg::before {
     background: #00000041;
 }
 
-.eventcard:focus img,.eventcard:hover img{
+.eventcard:focus img,
+.eventcard:hover img {
     transform: scale(1.1);
 }
 
-.eventimg::before{
+.eventimg::before {
     z-index: 1;
     content: '';
     position: absolute;
@@ -244,7 +247,7 @@ h2 {
     transition: .2s all;
 }
 
-.eventimg{
+.eventimg {
     overflow: hidden;
     position: relative;
     height: 50%;
@@ -353,11 +356,11 @@ h2 {
     width: 100%;
 }
 
-.pname{
+.pname {
     margin-top: 0;
 }
 
-.formSection p{
+.formSection p {
     margin-bottom: 0;
     font-style: normal;
     font-weight: 300;
@@ -367,7 +370,8 @@ h2 {
     color: #aaa;
     font-family: Poppins;
 }
-.leftSection .sendbutton p{
+
+.leftSection .sendbutton p {
     color: #fff;
     padding: 0.5em 0.75em;
     font-family: Poppins;
@@ -382,7 +386,7 @@ h2 {
     transform: skew(-20deg);
 }
 
-.sendbutton img{
+.sendbutton img {
     position: relative;
     top: .2em;
 }
@@ -471,7 +475,11 @@ h2 {
 
 @media screen and (max-width: 600px) {
     p {
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
     }
 
     .membercard p.no {
@@ -497,11 +505,11 @@ h2 {
         width: 100%;
     }
 
-    .eventc{
+    .eventc {
         width: 50%;
     }
 
-    .eventimg{
+    .eventimg {
         width: 50%;
         overflow: hidden;
         height: 100%;
@@ -549,10 +557,40 @@ h2 {
     margin-top: 5vh;
 }
 
+.aboutsct {
+    position: relative;
+    top: -5px;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+}
+
+.aboutsctsub {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #000000a0, #000000a0), url(/static/image/sct.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.aboutsct p {
+    text-align: justify;
+    color: #fff;
+    font-family: 'Poppins';
+}
+
+.aboutsct h2 {
+    color: #fff;
+    font-family: 'Poppins';
+}
+
 .placeholder {
     box-sizing: border-box;
     position: relative;
-    background-color: #000;
+    background: #000;
     padding: 3% 5vw;
     width: 100%;
     align-items: center;
@@ -560,39 +598,4 @@ h2 {
 
 .placeholder h2 {
     color: #fff;
-}
-
-.sctabout {
-    position: relative;
-    top: -5px;
-    height: 40vh;
-}
-
-.sctabout img {
-    object-fit: cover;
-    width: 100%;
-}
-
-.memberoverlay {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    background: #00000081;
-
-}
-
-
-
-.membercard p {
-    margin: 0;
-    color: #fff;
-    text-align: center;
-    font-family: Poppins;
-
-}
-
-.membercard p.no {
-    font-size: 4rem;
 }
