@@ -102,10 +102,6 @@ h2 {
 }
 
 .overlay{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
     display: block;
     position: absolute;
     left: 0;
@@ -113,6 +109,13 @@ h2 {
     top:0;
     bottom: 0;
     
+}
+
+.temp{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .oheading{
