@@ -661,6 +661,7 @@ margin-right: auto;
 .imageframe{
     overflow: hidden;
     width: 15vw;
+    height: 15vw;
     border-radius: 100%;
     border: 2px solid #fff ;
 }
