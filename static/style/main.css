@@ -101,6 +101,12 @@ h2 {
     top: 0;
 }
 
+.overlay{
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
 
 
 .aboutsection {
