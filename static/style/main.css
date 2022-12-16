@@ -639,9 +639,13 @@ h2 {
     font-weight: bold;
 }
 
+.card p{
+    color: #fff;
+}
+
 .imageframe{
     overflow: hidden;
-    width: 15%;
+    width: 15vw;
     border-radius: 100%;
     border: 2px solid #fff ;
 }
