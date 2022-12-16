@@ -593,23 +593,58 @@ h2 {
     top: -5px;
     background-color: #fff;
 
-    padding: 0 5vw;
+    padding: 0 5vw 3% 5vw;
     width: 100%;
     align-items: center;
 }
 
 .missionsection h3 {
+    margin-bottom: .5em;
     font-family: Montserrat;
     color: #000;
     font-weight: bold;
 }
 
 .missionsection p {
-    text-indent: 5em;
+    margin-top: .5em;
     text-align: justify;
     font-family: Poppins;
     color: #000;
 }
+
+.execomsection {
+    box-sizing: border-box;
+    position: relative;
+    background: #000;
+    padding: 3% 5vw;
+    width: 100%;
+    align-items: center;
+}
+
+.execomsection h2{
+    font-size: 1.75rem;
+    color: #fff;
+}
+
+.sirsub {
+    justify-content: space-around;
+    grid-row-gap: 1em;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.card{
+    width: 25%;
+}
+
+.sudentsub {
+    justify-content: space-around;
+    grid-row-gap: 1em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
 
 .placeholder {
     box-sizing: border-box;
