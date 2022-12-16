@@ -1,4 +1,4 @@
-function myFunction() {
+function menuButton() {
     var x = document.getElementById("responsive");
     if (x.className === "on") {
         x.className = "off";

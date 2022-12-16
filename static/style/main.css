@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Inter');
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 
 body {
     padding-top: 6rem;
     background-color: #fff;
     margin: 0;
 }
+
 h2 {
     font-size: 1.75rem;
     font-family: Orbitron;
@@ -15,13 +18,16 @@ h2 {
     margin-bottom: 1em;
 }
 
-.topnav {
-    z-index: 1;
+.top {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     top: 0;
     position: fixed;
-    width: -webkit-fill-available;
-    width: -moz-available;
-    overflow: clip;
+    z-index: 2;
+    width: 100%;
+}
+
+.topnav {
+    height: 4rem;
     padding: 1em;
     display: flex;
     align-items: center;
@@ -35,7 +41,9 @@ h2 {
 }
 
 .topnav .navlist {
+    width: 60vw;
     margin-left: auto;
+    justify-content: space-between;
     display: flex;
     list-style-type: none;
 }
@@ -49,7 +57,7 @@ h2 {
     text-align: center;
     padding: .5em 1.5em;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .topnav .navlist .navitem .active {
@@ -80,11 +88,14 @@ h2 {
     width: 100%;
 }
 
-.overlay {
+.homeimage::before {
+    content: "";
     display: block;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: #0000007c;
     opacity: 0.7;
     top: 0;
@@ -97,7 +108,7 @@ h2 {
     position: relative;
     top: -5px;
     background-color: #000;
-    
+
     padding: 3% 5vw;
     width: 100%;
     align-items: center;
@@ -117,27 +128,44 @@ h2 {
 .member {
     position: relative;
     top: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.member img {
+.memberimage img {
     object-fit: cover;
-    height: 30vh;
+    min-height: 30vh;
     width: 100%;
 }
 
-.memberoverlay {
+.memberimage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #00000081;
+}
+
+.member::before {
     display: flex;
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: #00000081;
 
 }
 
 .membersub {
+    position: absolute;
     margin: auto;
-    display: flex;gap: 1px;
+    display: flex;
+    gap: 1px;
     align-items: center;
     justify-content: space-around;
     width: 90%;
@@ -153,7 +181,7 @@ h2 {
     color: #fff;
     text-align: center;
     font-family: Poppins;
-    
+
 }
 
 .membercard p.no {
@@ -175,15 +203,119 @@ h2 {
     color: #4B0081;
 }
 
+.eventsub {
+    justify-content: space-between;
+    grid-row-gap: 1em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.eventcard {
+    overflow: hidden;
+    height: 30rem;
+    width: 27vw;
+    background: #FFFFFF;
+    border: 1px solid #C9C9C9;
+    border-radius: 10px;
+    transition: .2s all;
+}
+
+.eventcard:focus,
+.eventcard:hover {
+    box-shadow: 0 0 1.5em 0.25em rgb(0 0 0 / 25%);
+}
+
+.eventcard:focus .eventimg::before,
+.eventcard:hover .eventimg::before {
+    background: #00000041;
+}
+
+.eventcard:focus img,
+.eventcard:hover img {
+    transform: scale(1.1);
+}
+
+.eventimg::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #00000000;
+    transition: .2s all;
+}
+
+.eventimg {
+    overflow: hidden;
+    position: relative;
+    height: 50%;
+}
+
+.eventimg img {
+    position: static;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s all;
+}
+
+.eventc {
+    padding: 1em;
+}
+
+.eventc p {
+    font-family: Montserrat;
+    margin-top: 0;
+}
+
+.fulleventbutton {
+    width: max-content;
+    margin: 0 auto;
+    background: #224E7D;
+    transform: skew(-20deg);
+}
+
+
+.fulleventbutton p {
+    font-size: 14px;
+    color: #fff;
+    padding: .5em .75em;
+    font-family: Poppins;
+    text-align: center;
+    transform: skew(20deg);
+}
+
+.fulleventbutton a {
+    text-decoration: none;
+}
+
+.eventbuttonb {
+    position: absolute;
+    top: .3em;
+    left: .3em;
+    width: 100%;
+    height: 100%;
+    border: .1em solid #224E7D;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+.eventname {
+    font-weight: bold;
+    font-size: large;
+}
 
 .contact {
-    background: #212121;
+    background: #000;
     padding: 3% 5vw 0 5vw;
 }
 
 .contactHeader {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .git {
@@ -213,24 +345,83 @@ h2 {
 }
 
 .subSection {
-    display: flex;
     gap: 5vw;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftSection {
+    box-sizing: content-box;
+    width: 100%;
+}
+
+.pname {
+    margin-top: 0;
+}
+
+.formSection p {
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #aaa;
+    font-family: Poppins;
+}
+
+.leftSection .sendbutton p {
+    color: #fff;
+    padding: 0.5em 0.75em;
+    font-family: Poppins;
+    text-align: center;
+    transform: skew(20deg);
+}
+
+.sendbutton {
+    margin: 0 auto;
+    background: #224E7D;
+    width: fit-content;
+    transform: skew(-20deg);
+}
+
+.sendbutton img {
+    position: relative;
+    top: .2em;
 }
 
 
+.sendbutton a {
+    text-decoration: none;
+}
+
+.formname {
+    align-items: center;
+    border: 2.5px solid #aaa;
+    border-radius: 5px;
+    height: 6vh;
+
+    width: 100%;
+}
+
+.formmessage {
+    align-items: center;
+    border: 2.5px solid #aaa;
+    border-radius: 5px;
+    height: 20vh;
+    width: 100%;
+}
+
 .rightSection {
-    margin-left: auto;
-    float: right;
-    width: 40vw;
+    width: 90%;
 }
 
 .mapcontainer {
-
     overflow: hidden;
     height: 300px;
     width: 100%;
     position: relative;
-
 }
 
 .mapcontainer iframe {
@@ -258,7 +449,7 @@ h2 {
     font-size: 14px;
     line-height: 28px;
     letter-spacing: 0.02em;
-    color: rgba(255, 255, 255, 0.62);
+    color: #aaa;
     font-family: Poppins;
 }
 
@@ -273,14 +464,27 @@ h2 {
     font-size: 14px;
     line-height: 28px;
     letter-spacing: 0.02em;
-    color: rgba(255, 255, 255, 0.62);
+    color: #aaa;
     font-family: Poppins;
     text-align: center;
     margin: 0;
     padding: 3vh 0;
 }
 
+
+
 @media screen and (max-width: 600px) {
+    p {
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .membercard p.no {
+        font-size: 3rem;
+    }
 
     .topnav .navlist {
         display: none;
@@ -290,15 +494,38 @@ h2 {
         display: block;
         margin-left: auto;
     }
+
+    .eventsub {
+        grid-template-columns: auto;
+    }
+
+    .eventcard {
+        display: flex;
+        height: 15rem;
+        width: 100%;
+    }
+
+    .eventc {
+        width: 50%;
+    }
+
+    .eventimg {
+        width: 50%;
+        overflow: hidden;
+        height: 100%;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
     .on {
         background-color: #fff;
         padding-left: 0;
-        margin-top: 0;
+        padding-bottom: 1em;
+        margin: 0;
         display: block;
         list-style-type: none;
+
     }
 
     .on .navitem {
@@ -321,17 +548,49 @@ h2 {
 
     .aboutsection p {
         text-indent: 3em;
-        font-size: small;
+        font-size: 12px;
     }
 
+}
+
+.eventpage {
+    margin-top: 5vh;
+}
+
+.aboutsct {
+    position: relative;
+    top: -5px;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+}
+
+.aboutsctsub {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #000000a0, #000000a0), url(/static/image/sct.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.aboutsct p {
+    text-align: justify;
+    color: #fff;
+    font-family: 'Poppins';
+}
+
+.aboutsct h2 {
+    color: #fff;
+    font-family: 'Poppins';
 }
 
 .placeholder {
     box-sizing: border-box;
     position: relative;
-
-    background-color: #000;
-    
+    background: #000;
     padding: 3% 5vw;
     width: 100%;
     align-items: center;
