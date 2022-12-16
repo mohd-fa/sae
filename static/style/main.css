@@ -660,8 +660,19 @@ margin-right: auto;
     justify-content: space-around;
     grid-row-gap: 1em;
     display: grid;
-    padding-top: 1em;
     grid-template-columns: auto auto auto auto;
+    padding-top: 2em;
+}
+@media screen and (max-width: 600px) {
+    .studentsub{
+        grid-template-columns: auto;
+    }
+    .sirsub{
+        grid-template-columns: auto;
+    }
+    .imageframe{
+        width: 50vw;
+    }
 }
 
 
