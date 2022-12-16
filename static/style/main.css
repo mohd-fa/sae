@@ -587,6 +587,30 @@ h2 {
     font-family: 'Poppins';
 }
 
+.missionsection {
+    box-sizing: border-box;
+    position: relative;
+    top: -5px;
+    background-color: #fff;
+
+    padding: 0 5vw;
+    width: 100%;
+    align-items: center;
+}
+
+.missionsection h3 {
+    font-family: Montserrat;
+    color: #000;
+    font-weight: bold;
+}
+
+.missionsection p {
+    text-indent: 5em;
+    text-align: justify;
+    font-family: Poppins;
+    color: #000;
+}
+
 .placeholder {
     box-sizing: border-box;
     position: relative;
