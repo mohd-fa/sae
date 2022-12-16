@@ -634,6 +634,8 @@ h2 {
 }
 
 .card{
+    margin-left: auto;
+margin-right: auto;
     text-align: center;
     font-family: Montserrat;
     font-weight: bold;
