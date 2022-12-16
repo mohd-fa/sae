@@ -102,26 +102,22 @@ h2 {
 }
 
 .overlay{
-    display: block;
+    display: flex;
     position: absolute;
     left: 0;
     right: 0;
     top:0;
     bottom: 0;
+    align-content: center;
+    justify-content: center;
     
-}
-
-
-.temp{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .oheading{
     color: #fff;
     text-align: center;
+    font-family: Orbitron;
+    font-weight: bold;
 }
 
 .aboutsection {
