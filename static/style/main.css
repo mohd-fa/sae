@@ -108,12 +108,17 @@ h2 {
     right: 0;
     top:0;
     bottom: 0;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     
 }
 
+.temp{
+    height: fit-content;
+}
+
 .oheading{
+    font-size: 3rem;
     color: #fff;
     text-align: center;
     font-family: Orbitron;
