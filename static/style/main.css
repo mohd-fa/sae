@@ -194,6 +194,7 @@ h2 {
     height: 75%;
     box-shadow: 0px 0px 1em .5em #00000081;
     backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
     border-radius: 10px;
     background: linear-gradient(225.6deg, rgba(0, 0, 0, 0.36) 0%, rgba(0, 0, 0, 0.24) 100%);
 }
